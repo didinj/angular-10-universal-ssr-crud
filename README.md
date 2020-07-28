@@ -1,4 +1,6 @@
-# AngularSsr
+# Angular 10 Universal Server Side Rendering (SSR) CRUD Example
+
+This source code is part of [Angular 10 Universal Server Side Rendering (SSR) CRUD Example]().
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 

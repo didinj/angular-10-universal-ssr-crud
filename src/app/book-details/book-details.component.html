@@ -1,0 +1,25 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/books']"><mat-icon>list</mat-icon></a>
+  </div>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title><h2>{{book.title}}</h2></mat-card-title>
+      <mat-card-subtitle>{{book.author}} | {{book.updatedAt}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <h3>ISBN: {{book.isbn}}</h3>
+      <h3>Description: {{book.description}}</h3>
+      <h3>Publisher: {{book.publisher}}</h3>
+      <h3>Published Year:{{book.publishedYear}}</h3>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-flat-button color="primary" [routerLink]="['/book-edit', book._id]"><mat-icon>edit</mat-icon></a>
+      <a mat-flat-button color="warn" (click)="deleteBook(book._id)"><mat-icon>delete</mat-icon></a>
+    </mat-card-actions>
+  </mat-card>
+</div>
